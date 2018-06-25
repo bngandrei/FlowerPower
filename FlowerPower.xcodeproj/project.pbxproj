@@ -14,6 +14,11 @@
 		9525F66820D825C500268CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9525F66720D825C500268CFB /* Assets.xcassets */; };
 		9525F66B20D825C500268CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9525F66920D825C500268CFB /* LaunchScreen.storyboard */; };
 		9525F67620D825C500268CFB /* FlowerPowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525F67520D825C500268CFB /* FlowerPowerTests.swift */; };
+		9565276620DFB475000F9320 /* FlowerOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565276520DFB475000F9320 /* FlowerOrdersTableViewController.swift */; };
+		9565276B20E02DBA000F9320 /* FlowerOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9565276920E02DBA000F9320 /* FlowerOrderTableViewCell.swift */; };
+		9565276C20E02DBA000F9320 /* FlowerOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9565276A20E02DBA000F9320 /* FlowerOrderTableViewCell.xib */; };
+		95D0EA2F20D830E0000B6279 /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0EA2E20D830E0000B6279 /* Flower.swift */; };
+		95D0EA3120D830F7000B6279 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0EA3020D830F7000B6279 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		9525F67120D825C500268CFB /* FlowerPowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowerPowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9525F67520D825C500268CFB /* FlowerPowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPowerTests.swift; sourceTree = "<group>"; };
 		9525F67720D825C500268CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9565276520DFB475000F9320 /* FlowerOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerOrdersTableViewController.swift; sourceTree = "<group>"; };
+		9565276920E02DBA000F9320 /* FlowerOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerOrderTableViewCell.swift; sourceTree = "<group>"; };
+		9565276A20E02DBA000F9320 /* FlowerOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerOrderTableViewCell.xib; sourceTree = "<group>"; };
+		95D0EA2E20D830E0000B6279 /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		95D0EA3020D830F7000B6279 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,9 @@
 		9525F65C20D825C400268CFB /* FlowerPower */ = {
 			isa = PBXGroup;
 			children = (
+				9565276420DFB40F000F9320 /* Views */,
+				95D0EA2B20D82C85000B6279 /* DataModel */,
+				95D0EA2A20D82C5C000B6279 /* RequestManager */,
 				9525F65D20D825C400268CFB /* AppDelegate.swift */,
 				9525F65F20D825C400268CFB /* ViewController.swift */,
 				9525F66120D825C400268CFB /* Main.storyboard */,
@@ -97,6 +110,32 @@
 				9525F67720D825C500268CFB /* Info.plist */,
 			);
 			path = FlowerPowerTests;
+			sourceTree = "<group>";
+		};
+		9565276420DFB40F000F9320 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9565276520DFB475000F9320 /* FlowerOrdersTableViewController.swift */,
+				9565276920E02DBA000F9320 /* FlowerOrderTableViewCell.swift */,
+				9565276A20E02DBA000F9320 /* FlowerOrderTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95D0EA2A20D82C5C000B6279 /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				95D0EA3020D830F7000B6279 /* RequestManager.swift */,
+			);
+			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		95D0EA2B20D82C85000B6279 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				95D0EA2E20D830E0000B6279 /* Flower.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +222,7 @@
 				9525F66B20D825C500268CFB /* LaunchScreen.storyboard in Resources */,
 				9525F66820D825C500268CFB /* Assets.xcassets in Resources */,
 				9525F66320D825C400268CFB /* Main.storyboard in Resources */,
+				9565276C20E02DBA000F9320 /* FlowerOrderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D0EA3120D830F7000B6279 /* RequestManager.swift in Sources */,
 				9525F66020D825C400268CFB /* ViewController.swift in Sources */,
 				9525F66620D825C400268CFB /* FlowerPower.xcdatamodeld in Sources */,
+				95D0EA2F20D830E0000B6279 /* Flower.swift in Sources */,
 				9525F65E20D825C400268CFB /* AppDelegate.swift in Sources */,
+				9565276620DFB475000F9320 /* FlowerOrdersTableViewController.swift in Sources */,
+				9565276B20E02DBA000F9320 /* FlowerOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

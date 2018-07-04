@@ -10,8 +10,8 @@ import UIKit
 
 
 class Flower: NSObject {
-    var id : Int = 0
-    var desc: String = ""
-    var price : Int = 0
-    var deliver_to : String = ""
+    var id : Int?
+    var desc: String?
+    var price : Int?
+    var deliver_to : String?
 }

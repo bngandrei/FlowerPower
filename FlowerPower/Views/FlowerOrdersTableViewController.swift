@@ -8,9 +8,8 @@
 
 import UIKit
 
-var flowerArray = [Flower]()
-
 class FlowerOrdersTableViewController: UITableViewController {
+    var flowerArray = [Flower]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class FlowerOrdersTableViewController: UITableViewController {
         
         let reqManager = RequestManager()
         reqManager.fetchOrdersWithCompletionBlock { (flArray, error) in
-            flowerArray = flArray;
+            self.flowerArray = flArray;
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()

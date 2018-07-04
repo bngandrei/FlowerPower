@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON //cool
 
 struct appUrl {
     
@@ -23,27 +24,32 @@ class RequestManager: NSObject {
         let url = NSURL(string: mockDomainUrl)
         var flowerArray = [Flower]()
         
-        _ = URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(jsonData, response, error) -> Void in
             
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                print(jsonObj!.value(forKey: "flowerOrder" )!)
+            if let json = try? JSON(data:jsonData!) {
+                let flowerOrdersArray = json["flowerOrder"]
+                print(flowerOrdersArray)
+            }
                 
-                if let flowerOrdersArray = jsonObj!.value(forKey: "flowerOrder") as? NSArray {
+            if let jsonObj = try? JSONSerialization.jsonObject(with: jsonData!, options: .allowFragments) as? NSDictionary {
+//                print(jsonObj!.value(forKey: "flowerOrder" )!)
+                
+                if let flowerOrdersArray = jsonObj?.value(forKey: "flowerOrder") as? NSArray {
                     for flower in flowerOrdersArray {
                         if let flowerDict = flower as? NSDictionary {
                             let fl = Flower()
                             if let deliverTo = flowerDict.value(forKey: "deliver_to") {
-                                fl.deliver_to = deliverTo as! String
+                                fl.deliver_to = deliverTo as? String
 //                                flowerArray.append((name as? String)!)
                             }
                             if let id = flowerDict.value(forKey: "id") {
-                                fl.id = id as! Int
+                                fl.id = id as? Int
                             }
                             if let description = flowerDict.value(forKey: "description") {
-                                fl.desc = description as! String
+                                fl.desc = description as? String
                             }
                             if let price = flowerDict.value(forKey: "price") {
-                                fl.price = price as! Int
+                                fl.price = price as? Int
                             }
                             flowerArray.append(fl)
                         }

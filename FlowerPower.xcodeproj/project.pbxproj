@@ -50,7 +50,7 @@
 		9565276520DFB475000F9320 /* FlowerOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerOrdersTableViewController.swift; sourceTree = "<group>"; };
 		9565276920E02DBA000F9320 /* FlowerOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerOrderTableViewCell.swift; sourceTree = "<group>"; };
 		9565276A20E02DBA000F9320 /* FlowerOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerOrderTableViewCell.xib; sourceTree = "<group>"; };
-		956FB36B20ED02D0002FBD46 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		956FB36B20ED02D0002FBD46 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95D0EA2E20D830E0000B6279 /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
 		95D0EA3020D830F7000B6279 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		A857885C5E447D85F5689AA0 /* Pods_FlowerPower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerPower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
